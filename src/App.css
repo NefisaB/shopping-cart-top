@@ -1,1 +1,50 @@
 
+.App {
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    isolation: isolate;
+}
+
+.App::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-color: rgb(215, 215, 215);
+    opacity: 0.7;
+}
+
+nav {
+    height: 80px;
+    background-color: rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: rgb(109, 0, 64);
+}
+
+nav > a:hover {
+    color: rgba(109,0,64, 0.7);
+}
+
+.homepage {
+    padding: 30px;
+    letter-spacing: 1px;
+    color: rgb(109, 0, 64)
+}
+
+.homepage > h1 {
+    font-size: 3rem;
+}
