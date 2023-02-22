@@ -20,7 +20,7 @@
 
 nav {
     height: 80px;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(250,235,215, 0.5);
     position: sticky;
     top: 0;
     left: 0;
@@ -36,7 +36,8 @@ nav > a {
 }
 
 nav > a:hover {
-    color: rgba(109,0,64, 0.7);
+    color: rgba(109,0,64, 0.9);
+    text-decoration: underline;
 }
 
 .homepage {
@@ -49,6 +50,31 @@ nav > a:hover {
     font-size: 3rem;
 }
 
+.cart {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: sticky;
+    top: 100px;
+    margin-left: auto;
+    background-color: whitesmoke;
+}
+
+.cart >img {
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.cart > span {
+    font-size: 1.25rem;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    color:rgb(109, 0, 64);
+    font-weight: 600;
+}
 
 main .items {
     padding: 20px;
@@ -56,6 +82,10 @@ main .items {
     grid-template-columns: repeat(auto-fill, 300px);
     gap: 20px;
     justify-content: center;
+}
+
+.items > a {
+    text-decoration: none;
 }
 
 .card {
@@ -73,11 +103,144 @@ main .items {
 
 .card > img {
     border-radius: 10px 10px 0 0;
-    min-width: 100%;
+    width: 100%;
     height: 450px;
 }
 
 .card:hover {
     transform: scale(101%);
     box-shadow: 1px 5px 5px 5px rgb(109, 0, 64);
+}
+
+.preview {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.preview-card {
+    width: 300px;
+    margin-top: 5px;
+    margin-left: 25%;
+    text-align: center;
+    letter-spacing: 2px;
+    color: rgb(109, 0, 64);
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.preview-card > img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.preview-buttons {
+    width: 200px;
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.preview-buttons > button {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(109, 0, 64);
+    color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+.preview-buttons > button:hover {
+    background-color: rgba(109,0,64, 0.85);
+}
+
+.preview-buttons > button:active{
+    box-shadow: 5px 5px 10px -3px rgba(14, 9, 9, 0.5);
+}
+
+.preview-buttons span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.preview-buttons .add-btn {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.checkout {
+    color: rgb(109, 0, 64);
+    padding-left: 50px;
+}
+
+.checkout h2 {
+    text-transform: uppercase;
+}
+
+.checkout ul  {
+    width: 50%;
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+}
+
+.checkout li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.checkout li > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkout li img {
+    width: 50px;
+    height: 80px;
+    border-radius: 4px;
+}
+
+.list-buttons > button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(109, 0, 64);
+    color: white;
+}
+
+list-buttons>button:active {
+    background-color: rgba(109,0,64, 0.85);
+}
+
+.list-buttons>button:active{
+    box-shadow: 5px 5px 10px -3px rgba(14, 9, 9, 0.5);
+}
+
+.checkout p {
+    font-size: 1.5rem;
+}
+
+.reset-button {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(109, 0, 64);
+    color: white;
+    text-transform: uppercase;
+}
+
+.reset-button:hover {
+    background-color: rgba(109,0,64, 0.85);
+}
+
+.reset-button:active {
+    box-shadow: 5px 5px 10px -3px rgba(14, 9, 9, 0.5);
 }
