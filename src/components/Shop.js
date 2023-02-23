@@ -4,12 +4,12 @@ import ShopItemPreview from "./ShopItemPreview";
 
 const Shop = (props) => {
 
-    const { items, increment, decrement, addItemToCart, addQuantity } = props;
+    const { items, increment, decrement, addItemToCart, addQuantity, handleSingleAddItem } = props;
 
     const itemsPreview = items.map(item => {
         return (
             <Link to={`/shop/${item.id}`} key={item.id}>
-                <ShopItem item={item} />
+                <ShopItem item={item} handleSingleAddItem={handleSingleAddItem}  />
             </Link>
         );
     });

@@ -27,7 +27,7 @@ function App() {
     setAddQuantity(prevState => prevState+1)
   }
 
-  const addItemToCart = (id) => {
+  const addItem = (id) => {
     let temp = { ...items[id - 1], addQuantity };
     const temp2 = addedItems.find(item => item.id === id);
     if (temp2) {
@@ -39,6 +39,10 @@ function App() {
     setSumOfQuantities(prevState => prevState + addQuantity);
     setSumOfValue(prevState => prevState + addQuantity * Number(temp.price));
     setAddQuantity(1);
+  }
+
+  const addItemToCart = (id) => {
+    addItem(id);
     navigate(-1);
   }
 
@@ -68,7 +72,13 @@ function App() {
     setAddedItems([]);
     setSumOfQuantities(0);
     setSumOfValue(0);
- //   navigate("/");
+    navigate("/");
+  }
+
+  const handleSingleAddItem = (e, id) => {
+    e.stopPropagation();
+    e.preventDefault();
+    addItem(id);
   }
 
   return (
@@ -87,7 +97,8 @@ function App() {
           increment={increment}
           decrement={decrement}
           addQuantity={addQuantity}
-          addItemToCart={addItemToCart} />} />
+          addItemToCart={addItemToCart}
+          handleSingleAddItem={handleSingleAddItem} />} />
         <Route path="/checkout" element={<Checkout
           addedItems={addedItems}
           sumOfValues={sumOfValues.toFixed(2)}
