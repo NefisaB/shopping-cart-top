@@ -88,7 +88,7 @@ function App() {
         className="cart"
         onClick={handleCartClick} >
         <span>{sumOfQuantities}</span>
-        <img src="../cart.png" alt="icon"/>
+        <img src={process.env.PUBLIC_URL + "/cart.png"} alt="icon"/>
       </div>
        <Routes>
         <Route path='/' element={<Home />} />
