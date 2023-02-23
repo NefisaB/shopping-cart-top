@@ -4,7 +4,7 @@ const Checkout = (props) => {
 
     const { addedItems, decrementFromCart, incrementFromCart, sumOfValues, reset } = props;
 
-    const addedItemsList = addedItems.map(item => {
+    const addedItemsList = addedItems.length > 0 && addedItems.map(item => {
         return (
             <li key={item.id}>
                 <div>
@@ -26,7 +26,7 @@ const Checkout = (props) => {
                 <button className="reset-button" onClick={reset}>Checkout</button>
             </div>}
             {addedItems.length === 0 && 
-                <div>
+                <div data-testid="message-empty">
                 You haven't purchased anything yet... Go to our <Link to="/shop" >SHOP</Link></div>
                 }
         </div>

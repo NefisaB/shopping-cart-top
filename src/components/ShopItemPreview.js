@@ -23,7 +23,7 @@ const ShopItemPreview = (props) => {
                         </div>
                         <div className="preview-buttons">
                             <button onClick={decrement} >-</button>
-                            <span>{addQuantity}</span>
+                            <span data-testid="quantity">{addQuantity}</span>
                             <button onClick={increment}>+</button>
                             <button className="add-btn" onClick={() => addItemToCart(item.id)}>Add To Cart</button>
                         </div>
